@@ -3,16 +3,16 @@ import SingleMeal from "./SingleMeal";
 
 const Meal = () => {
     const mealData = useLoaderData()
-    const meals = mealData.categories;
+    const mealss = mealData.meals;
     
     return (
        
         <div className="">
-            <h1 className="text-3xl font-bold py-12 ">CHOOSE <span className="text-secondary">YOUR MEAL</span></h1>
-            <div className="grid grid-cols-1 md:grid-cols-3">
+            <h1 className="text-3xl font-bold py-12 text-center ">MAKE YOUR <span className="text-secondary">RECIPE</span></h1>
+            <div className="grid grid-cols-1 md:grid-cols-1">
             {
-                meals.map(meal=>
-                     <SingleMeal key={meal.id} meal={meal}></SingleMeal>
+                mealss.map(meal=>
+                     <SingleMeal key={meal.idMeal} meal={meal}></SingleMeal>
                     )
             }
         </div>
